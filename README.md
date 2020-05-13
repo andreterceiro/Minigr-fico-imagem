@@ -15,4 +15,4 @@ Chamando a imagem por exemplo em um index.html. Tirando detalhes de HTML, o que 
 ```
 <img src="imagem.php" />
 
-Licensa Mit
+Licença Mit
