@@ -1,6 +1,6 @@
 Uma antiga biblioteca para gerar gráficos que eu fiz
 
-Exemplo de como usar:
+Exemplo de como usar. Abaixo supomos que será um imagem.php:
 ```
 <?php
 	require_once("MiniGraficoImagem.php");
@@ -10,4 +10,8 @@ Exemplo de como usar:
 	$grafico->gerarGrafico("titulo");
 ?>
 ```
+Chamando a imagem por exemplo em um index.html. Tirando detalhes de HTML, o que importa é:
+```
+<img src="imagem.php" />
+
 Licensa Mit
