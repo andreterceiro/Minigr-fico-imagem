@@ -200,7 +200,7 @@ class Minigraficoimagem
      *
      * @returns null
      */
-    public function SetarCorFonte($vermelho, $verde, $azul) 
+    public function setarCorFonte($vermelho, $verde, $azul) 
     {
         if ($this->validaCor($vermelho, $verde, $azul)){
            $this->fonte["padrao"]["cor"]["vermelho"] = $vermelho ;
@@ -217,7 +217,7 @@ class Minigraficoimagem
      * 
      * @retuns null
      */ 
-    public function Reiniciar()
+    public function reiniciar()
     {
         $this->dados="";
         $this->cor="";
