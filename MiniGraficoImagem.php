@@ -3,7 +3,8 @@
 /**
  * Classe para geração de gráficos
  */ 
-class Minigraficoimagem {
+class Minigraficoimagem 
+{	
 	/**
 	 * Construtor
 	 */ 
@@ -18,7 +19,7 @@ class Minigraficoimagem {
 	    $this->linhaReferencia["cor"]["vermelho"]=140;
 	    $this->linhaReferencia["cor"]["verde"]=140;
 	    $this->linhaReferencia["cor"]["azul"]=140;
-	    $this->linhaReferencia["valor"]=0;
+	    $this->linhaReferencia["valor"]=1;
 	}
 
 	/**
@@ -216,8 +217,8 @@ class Minigraficoimagem {
 	     }
 	     
 	
-	     if ($this->validaCor($bordavermelha,$bordaVerde,$bordaAzul)==1) {
-		    $this->borda["cor"]["vermelho"][$this->indice]=$bordavermelha;
+	     if ($this->validaCor($bordaVermelha,$bordaVerde,$bordaAzul)==1) {
+		    $this->borda["cor"]["vermelho"][$this->indice]=$bordaVermelha;
   		    $this->borda["cor"]["verde"][$this->indice]=$bordaVerde;
 		    $this->borda["cor"]["azul"][$this->indice]=$bordaAzul;
 	     } else {
@@ -405,7 +406,7 @@ class Minigraficoimagem {
 	    }
 
 	    if ($this->linhaReferencia["valor"] < 6 && $this->linhaReferencia["valor"] > 0) {
-		    for($cont=1 ; $cont<$this->linhaReferencia["valor"] ; $cont++) {
+		    for($cont=1 ; $cont < $this->linhaReferencia["valor"] ; $cont++) {
 			    // CRIANDO A IMAGEM 
 			    \imageDashedLine(
 				    $imagem,
@@ -424,7 +425,7 @@ class Minigraficoimagem {
 				) ; 
 		    }
 	    } else {
-			throw new \UnexpectedValueException("A linha de referência ($this->linhaReferencia['valor']) não tinha um valor de 1 a 5");
+			throw new \UnexpectedValueException('A linha de referência ($this->linhaReferencia["valor"]) não tinha um valor de 1 a 5');
 		}
 	   
 	    \imagePng($imagem) ;
