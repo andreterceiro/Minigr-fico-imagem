@@ -27,20 +27,49 @@ class Minigraficoimagem
     const BORDA_100_PORCENTO = 2;
 
     /**
+     * Índice usado internamente para controle do que já foi cadastrado
+     * 
+     * @var int
+     */ 
+    private $indice = 0;
+    
+    /**
+     * Soma usada internamente dos valores cadastrados
+     * 
+     * @var int
+     */ 
+    private $soma = 0;
+
+	/**
+	 * Dados da linha de base (cor, espessura etc)
+	 * 
+	 * @var array
+	 */
+	private $linhaBase = array ();
+
+	/**
+	 * Dados da linha de base (cor, espessura etc)
+	 * 
+	 * @var array
+	 */
+	private $linhaReferencia = array (
+		'valor' => 3
+	);
+	  
+	/**
+	 * Tipo da borda (veja o $this->setarTipoBorda())
+	 * 
+	 * @var array
+	 */	
+	private $borda = array(
+		'tipo' => 2
+	);
+	  
+    /**
      * Construtor
      */ 
     public function __construct() 
     {//minigraficoimagem() { PHP 4
-        $this->borda["tipo"] = 1;
-        $this->indice=0;
-        $this->soma=0;
-        $this->linha_base["vermelho"]=000000;
-        $this->linhaBase["verde"]=000000;
-        $this->linhaBase["azul"]=000000;
-        $this->linhaReferencia["cor"]["vermelho"]=140;
-        $this->linhaReferencia["cor"]["verde"]=140;
-        $this->linhaReferencia["cor"]["azul"]=140;
-        $this->linhaReferencia["valor"]=1;
     }
 
     /**
