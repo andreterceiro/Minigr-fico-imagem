@@ -1,0 +1,7 @@
+{
+    "name": "andreterceiro/minigraficoimagem",
+    "description": "Uma pequena biblioteca para geração de gráficos",
+    "require": {
+        "php": "^5.0"
+	}
+}
