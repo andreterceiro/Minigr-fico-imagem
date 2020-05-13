@@ -10,3 +10,4 @@ Exemplo de como usar:
 	$grafico->gerarGrafico("titulo");
 ?>
 ```
+Licensa Mit
