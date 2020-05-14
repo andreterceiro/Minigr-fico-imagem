@@ -15,6 +15,7 @@ Chamando a imagem por exemplo em um index.html. Tirando detalhes de HTML, o que 
 ```
 <img src="imagem-exemplo.php" />
 ```
+
 Um exemplo mais complexo é:
 ```
 <?php
