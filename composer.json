@@ -3,5 +3,6 @@
     "description": "Uma pequena biblioteca para geração de gráficos",
     "require": {
         "php": ">=5.0"
-	}
+    }
+    "version": "1.0.0"
 }
