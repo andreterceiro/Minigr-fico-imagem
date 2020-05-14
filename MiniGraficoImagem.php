@@ -126,19 +126,23 @@ class Minigraficoimagem
     /**
      * Seta a linha de referência
      * 
-     * @param int $vermelho Valor do vermelho de 0 a 255 
-     * @param int $verde Valor do verde de 0 a 255 
-     * @param int $azul Valor do azul de 0 a 255 
+     * @param int $numeroDeAreas Número de áreas resultantes das linhas de referência
+     * @param int $vermelho=0 Valor do vermelho de 0 a 255 
+     * @param int $verde=0 Valor do verde de 0 a 255 
+     * @param int $azul=0 Valor do azul de 0 a 255 
      *
      * @throws \InvalidArgumentException Se uma cor não tiver um valor de 0 a 255
      *   
      * @returns null
      */ 
-    public function setarLinhaReferencia($numeroDeLinhas="", $vermelho="", $verde="", $azul="") 
+    public function setarLinhaReferencia($numeroDeAreas, $vermelho=0, $verde=0, $azul=0) 
     {
-        if ($numeroDeLinhas >=0 && $numeroDeLinhas < 6) $this->linhaReferencia["valor"] = $numeroDeLinhas ;
-        if ($this->ValidaCor($vermelho,$verde,$azul)==1) {
-              $this->linhaReferencia["cor"]["vermelho"]=$vermelho;
+        if ($numeroDeAreas >=0 && $numeroDeAreas < 6) {
+			$this->linhaReferencia["valor"] = $numeroDeAreas;
+		}
+		
+        if ($this->ValidaCor($vermelho, $verde, $azul)) {
+            $this->linhaReferencia["cor"]["vermelho"]=$vermelho;
             $this->linhaReferencia["cor"]["verde"]=$verde;
             $this->linhaReferencia["cor"]["azul"]=$azul;
         } else {
