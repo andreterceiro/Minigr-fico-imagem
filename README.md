@@ -28,4 +28,6 @@ Um exemplo mais complexo é:
 ?>
 ```
 
+Exemplos estão disponíveis no diretório "exemplos"
+
 Licença Mit
