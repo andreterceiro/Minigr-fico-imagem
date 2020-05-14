@@ -14,11 +14,11 @@ Exemplo de como usar. Abaixo supomos que será um imagem.php:
 Chamando a imagem por exemplo em um index.html. Tirando detalhes de HTML, o que importa é:
 ```
 <img src="imagem-exemplo.php" />
-
+```
 Um exemplo mais complexo é:
 ```
 <?php
-	require_once("../MiniGraficoImagem.php");
+	require_once("MiniGraficoImagem.php");
 	$grafico = new MiniGraficoImagem;
 	$grafico->setarLinhaReferencia(5);
 	$grafico->cadastrar(1,"Linux",255,0,0);
