@@ -1,4 +1,4 @@
-Uma antiga biblioteca para gerar gráficos que eu fiz
+Uma antiga biblioteca para gerar gráficos que eu fiz.
 
 Exemplo de como usar. Abaixo supomos que será um imagem.php:
 ```
@@ -28,6 +28,6 @@ Um exemplo mais complexo é:
 ?>
 ```
 
-Exemplos estão disponíveis no diretório "exemplos"
+Exemplos estão disponíveis no diretório "exemplos".
 
-Licença Mit
+Licença Mit.
