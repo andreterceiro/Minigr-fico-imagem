@@ -1,7 +1,8 @@
 <?php
+namespace andreterceiro;
 
 /**
- * Classe para geração de gráficos
+ * Classe para geraÃ§Ã£o de grÃ¡ficos
  */ 
 class Minigraficoimagem 
 {	
@@ -52,7 +53,7 @@ class Minigraficoimagem
 	 * @param int $verde Valor do verde de 0 a 255 
 	 * @param int $azul Valor do azul de 0 a 255 
 	 *  
-	 * @throws \InvalidArgumentException Se uma cor não tiver um valor de 0 a 255
+	 * @throws \InvalidArgumentException Se uma cor nÃ£o tiver um valor de 0 a 255
 	 * 
 	 * @returns null
 	 */  
@@ -74,13 +75,13 @@ class Minigraficoimagem
 	}
 
     /**
-     * Seta a linha de referência
+     * Seta a linha de referÃªncia
 	 * 
 	 * @param int $vermelho Valor do vermelho de 0 a 255 
 	 * @param int $verde Valor do verde de 0 a 255 
 	 * @param int $azul Valor do azul de 0 a 255 
 	 *
-	 * @throws \InvalidArgumentException Se uma cor não tiver um valor de 0 a 255
+	 * @throws \InvalidArgumentException Se uma cor nÃ£o tiver um valor de 0 a 255
 	 *   
 	 * @returns null
 	 */ 
@@ -104,7 +105,7 @@ class Minigraficoimagem
 	 *     TIPO 1= com borda nas barras, 
 	 *     TIPO 2= borda indicando o total 
 	 * 
-	 * @throws \InvalidArgumentException Se o tipo não tiver um valor de 0 a 2
+	 * @throws \InvalidArgumentException Se o tipo nÃ£o tiver um valor de 0 a 2
 	 * 
 	 * @returns null
 	 */ 
@@ -124,7 +125,7 @@ class Minigraficoimagem
 	 * @param int $verde Valor do verde de 0 a 255 
 	 * @param int $azul Valor do azul de 0 a 255 
 	 * 
-	 * @throws \InvalidArgumentException Se uma cor não tiver um valor de 0 a 255
+	 * @throws \InvalidArgumentException Se uma cor nÃ£o tiver um valor de 0 a 255
 	 *  
 	 * @returns null
 	 */ 
@@ -146,7 +147,7 @@ class Minigraficoimagem
 	 * @param int $verde Valor do verde de 0 a 255 
 	 * @param int $azul Valor do azul de 0 a 255 
 	 *  
-  	 * @throws \InvalidArgumentException Se uma cor não tiver um valor de 0 a 255
+  	 * @throws \InvalidArgumentException Se uma cor nÃ£o tiver um valor de 0 a 255
      *
 	 * @returns null
 	 */
@@ -177,7 +178,7 @@ class Minigraficoimagem
 	}
 	
 	/**
-	 * Cadastra um valor para o gráfico
+	 * Cadastra um valor para o grÃ¡fico
 	 * 
 	 * @param int $valor Valor a cadastrar
 	 * @param string $rotulo Texto relacionado ao valor acima
@@ -191,7 +192,7 @@ class Minigraficoimagem
 	 * @param int $bordaVerde = 0. Valor de 0 a 255 da borda em verde
 	 * @param int $bordaAzul = 0. Valor de 0 a 255 da borda em azul
 	 * 
-	 * @throws \InvalidArgumentException Se alguma cor (parâmetro a partir do terceiro) não tiver um valor de 0 a 255
+	 * @throws \InvalidArgumentException Se alguma cor (parÃ¢metro a partir do terceiro) nÃ£o tiver um valor de 0 a 255
 	 * 
 	 * @returns null
 	 */ 	
@@ -205,7 +206,7 @@ class Minigraficoimagem
 		    $this->barra["cor"]["verde"][$this->indice] = $barraVerde;
 		    $this->barra["cor"]["azul"][$this->indice] = $barraAzul;
 	     } else {
-		    throw new \InvalidArgumentException("As cores (parâmetros a partir do terceiro) devem ter valores de 0 a 255");
+		    throw new \InvalidArgumentException("As cores (parÃ¢metros a partir do terceiro) devem ter valores de 0 a 255");
 	     }
 	
 	     if ($this->validaCor($fonteVermelha, $fonteVerde, $fonteAzul)==1) {
@@ -213,7 +214,7 @@ class Minigraficoimagem
 		    $this->fonte["cor"]["verde"][$this->indice] = $fonteVerde;
 		    $this->fonte["cor"]["azul"][$this->indice] = $fonteAzul;
 	     } else {
-		    throw new \InvalidArgumentException("As cores (parâmetros a partir do terceiro) devem ter valores de 0 a 255");
+		    throw new \InvalidArgumentException("As cores (parÃ¢metros a partir do terceiro) devem ter valores de 0 a 255");
 	     }
 	     
 	
@@ -222,7 +223,7 @@ class Minigraficoimagem
   		    $this->borda["cor"]["verde"][$this->indice]=$bordaVerde;
 		    $this->borda["cor"]["azul"][$this->indice]=$bordaAzul;
 	     } else {
-		    throw new \InvalidArgumentException("As cores (parâmetros a partir do terceiro) devem ter valores de 0 a 255");
+		    throw new \InvalidArgumentException("As cores (parÃ¢metros a partir do terceiro) devem ter valores de 0 a 255");
 	     }
 	
   	     $this->indice++; 
@@ -230,22 +231,22 @@ class Minigraficoimagem
 	}
 
 	/**
-	 * Gera o gráfico com base no que foi cadastrado anteriormente
+	 * Gera o grï¿½fico com base no que foi cadastrado anteriormente
 	 * 
-	 * @param int $fundoVermelho = 215. Valor do vermelho do fundo do gráfico. De 0 a 255
-	 * @param int $fundoVerde = 215. Valor do verde do fundo do gráfico. De 0 a 255
-	 * @param int $fundoAzul = 215. Valor do azul do fundo do gráfico. De 0 a 255
-     * @param bool $porcentagemNaBarra = true. Indica se colocará a porcentagem na barra
+	 * @param int $fundoVermelho = 215. Valor do vermelho do fundo do grÃ¡fico. De 0 a 255
+	 * @param int $fundoVerde = 215. Valor do verde do fundo do grÃ¡fico. De 0 a 255
+	 * @param int $fundoAzul = 215. Valor do azul do fundo do grÃ¡fico. De 0 a 255
+     * @param bool $porcentagemNaBarra = true. Indica se colocarï¿½ a porcentagem na barra
      * 
-     * @throws \UnexpectedValueException Se $this->borda['tipo'] não tiver um valor de 0 a 2
-     * @throws \UnexpectedValueException Se a linha de referência ($this->linhaReferencia['valor']) não tiver um valor de 1 a 5
+     * @throws \UnexpectedValueException Se $this->borda['tipo'] nÃ£o tiver um valor de 0 a 2
+     * @throws \UnexpectedValueException Se a linha de referÃªncia ($this->linhaReferencia['valor']) nï¿½o tiver um valor de 1 a 5
      * 
      * @returns @null
 	 */  
 	public function gerarGrafico($fundovermelho=215, $fundoverde=215, $fundoazul=255, $porcentagemNaBarra=1)
 	{
-	    if ($this->soma==0) $this->soma="1" ; // PARA EVITAR O ERRO DE DIVISÃO POR 0 - NÃo INFLUI NOS RESULTADOS
-	    $tamanhoTotal=count($this->dados) * 50 + 30  ; // Calculando a extensão do gráfico no eixo y (plano cartesiano)
+	    if ($this->soma==0) $this->soma="1" ; // PARA EVITAR O ERRO DE DIVISÃƒO POR 0 - NÃƒO INFLUENCIA NOS RESULTADOS
+	    $tamanhoTotal=count($this->dados) * 50 + 30  ; // Calculando a extensÃ£o do grÃ¡fico no eixo y (plano cartesiano)
 	    if ($this->linhaReferencia["valor"] != 0 ) {
 	 	    $imagem=ImageCreate(600,$tamanhoTotal+15);
 	    } else{
@@ -255,7 +256,7 @@ class Minigraficoimagem
 	    if ($this->ValidaCor($fundovermelho,$fundoverde,$fundoazul)) { // Setando a cor de fundo
 		    $fundo=\imageColorAllocate($imagem,$fundovermelho,$fundoverde,$fundoazul) ; // Configurando a cor de fundo
 	    } else { 
-		    $fundo=\imageColorAllocate($imagem,215,215,215) ; // Configurando a cor de fundo com um cinza padrão
+		    $fundo=\imageColorAllocate($imagem,215,215,215) ; // Configurando a cor de fundo com um cinza padrï¿½o
         }
        
 	    $preto=\imageColorAllocate($imagem,0,0,0) ; // Configurando a cor da linha de base
@@ -273,7 +274,7 @@ class Minigraficoimagem
 		    $linhaFinal = $tamanhoTotal - 10 ;
 	    }
 	   
-	    // Colocando a área preenchida
+	    // Colocando a Ã¡rea preenchida
 	    \imageFilledRectangle(
 		    $imagem,
 		    9-$this->linhaBase["espessura"],
@@ -323,7 +324,7 @@ class Minigraficoimagem
 					$this->barra["cor"]["azul"][$cont]
 				);
    	        } else {
-		        throw new \InvalidArgumentException("A(s) cor(es) de uma barra estão com valor(es) inválido(s). Devem ser de 0 a 255");
+		        throw new \InvalidArgumentException("A(s) cor(es) de uma barra estÃ£o com valor(es) invï¿½lido(s). Devem ser de 0 a 255");
 	        }
 		  
 		    $corFonte = \imageColorAllocate(
@@ -340,7 +341,7 @@ class Minigraficoimagem
 			}
 			    
 		    if ($this->borda["tipo"]==0 ) {
-			    // Colocando a área preenchida
+			    // Colocando a Ã¡rea preenchida
 			    \imageString(
 			        $imagem, 
 			        3, 
@@ -349,7 +350,7 @@ class Minigraficoimagem
 			        $corFonte
 				);
 		    } elseif ($this->borda["tipo"]==1) {
-			    // Colocando a área preenchida
+			    // Colocando a ï¿½rea preenchida
 			    \imageRectangle(
 			        $imagem,
 			        10,
@@ -359,7 +360,7 @@ class Minigraficoimagem
 			        $preto
 				);
 				
-			    // Colocando a área preenchida
+			    // Colocando a Ã¡rea preenchida
 			    \imageString(
 					$imagem,
 					3,
@@ -378,10 +379,10 @@ class Minigraficoimagem
 					$preto
 				) ; 
 			    
-			    // Máscara com a cor de fundo para cobrir o 1px da borda esquerda
+			    // MÃ¡scara com a cor de fundo para cobrir o 1px da borda esquerda
 			    \ImageRectangle($imagem,10, $posicaoY, 11 ,$posicaoY + 20, $fundo);
 			    
-			    // Colocando a área preenchida 
+			    // Colocando a Ã¡rea preenchida 
 			    \ImageString(
 					$imagem,
 					6,
@@ -390,14 +391,14 @@ class Minigraficoimagem
 					$this->dados[$cont] . " - " . $porcentagem  ,$corFonte
 				); 
 		    } else {
-			    throw new \UnexpectedValueException("A borda não tinha um valor de 1 a 2");	
+			    throw new \UnexpectedValueException("A borda nï¿½o tinha um valor de 1 a 2");	
 			}
 		  
 		    if ($this->dados[$cont] > 0){	
-			    \imageFilledRectangle($imagem, 10, $posicaoY, $posicaoX , $posicaoY + 20, $cor) ; // Colocando a área preenchida
+			    \imageFilledRectangle($imagem, 10, $posicaoY, $posicaoX , $posicaoY + 20, $cor) ; // Colocando a ï¿½rea preenchida
 		    }
 
-		    \imageString($imagem,5,15,$posicaoY - 17, $this->rotulo[$cont]  ,$corFonte) ; // Colocando a área preenchida
+		    \imageString($imagem,5,15,$posicaoY - 17, $this->rotulo[$cont]  ,$corFonte) ; // Colocando a ï¿½rea preenchida
 		  
 		    // Colocando a porcentagem a barra
 		    if ($porcentagemNaBarra != 0) {
@@ -416,7 +417,7 @@ class Minigraficoimagem
 				    $tamanhoTotal-10,$corPontilhado
 			    );
 			 
-			    // Colocando a área preenchida
+			    // Colocando a Ã¡rea preenchida
 			    \imageString(
 			        $imagem,
 			        5,
@@ -425,16 +426,16 @@ class Minigraficoimagem
 				) ; 
 		    }
 	    } else {
-			throw new \UnexpectedValueException('A linha de referência ($this->linhaReferencia["valor"]) não tinha um valor de 1 a 5');
+			throw new \UnexpectedValueException('A linha de referï¿½ncia ($this->linhaReferencia["valor"]) nï¿½o tinha um valor de 1 a 5');
 		}
 	   
 	    \imagePng($imagem) ;
 	}
 
 	/** 
-	 * Gera uma cor aleatória
+	 * Gera uma cor aleatÃ³ria
 	 * 
-	 * @returns array Retorna um array de 6 posições referente a cor gerada
+	 * @returns array Retorna um array de 6 posiÃ§Ãµes referente a cor gerada
 	 */ 
 	public function gerarCor()
 	{
